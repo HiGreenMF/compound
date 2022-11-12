@@ -12,17 +12,16 @@ if (!isSSR) {
       const userRole = window.localStorage.getItem('userRole') || 'admin';
       Mock.mock(new RegExp('/api/user/userInfo'), () => {
         return Mock.mock({
-          name: '王立群',
-          avatar:
-            'https://lf1-xgcdn-tos.pstatp.com/obj/vcloud/vadmin/start.8e0e4855ee346a46ccff8ff3e24db27b.png',
-          email: 'wangliqun@email.com',
+          name: '米凡',
+          avatar: 'https://avatars.githubusercontent.com/u/84114269?s=40&v=4',
+          email: 'mifan@email.com',
           job: 'frontend',
           jobName: '前端开发工程师',
           organization: 'Frontend',
           organizationName: '前端',
           location: 'beijing',
-          locationName: '北京',
-          introduction: '王力群并非是一个真实存在的人。',
+          locationName: '深圳',
+          introduction: '小霸王游戏机',
           personalWebsite: 'https://www.arco.design',
           verified: true,
           phoneNumber: /177[*]{6}[0-9]{2}/,
@@ -47,7 +46,7 @@ if (!isSSR) {
             msg: '密码不能为空',
           };
         }
-        if (userName === 'admin' && password === 'admin') {
+        if (userName === 'admin' && password === '123456') {
           return {
             status: 'ok',
           };
