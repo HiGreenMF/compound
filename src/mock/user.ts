@@ -24,7 +24,7 @@ if (!isSSR) {
           introduction: '小霸王游戏机',
           personalWebsite: 'https://www.arco.design',
           verified: true,
-          phoneNumber: /177[*]{6}[0-9]{2}/,
+          phoneNumber: /131[*]{6}[0-9]{2}/,
           accountId: /[a-z]{4}[-][0-9]{8}/,
           registrationTime: Mock.Random.datetime('yyyy-MM-dd HH:mm:ss'),
           permissions: generatePermission(userRole),
