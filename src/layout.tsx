@@ -23,7 +23,7 @@ import useRoute, { IRoute } from '@/routes';
 import { isArray } from './utils/is';
 import useLocale from './utils/useLocale';
 import getUrlParams from './utils/getUrlParams';
-import lazyload from './utils/lazyload';
+import lazyLoad from './utils/lazyload';
 import { GlobalState } from './store';
 import styles from './style/layout.module.less';
 
@@ -66,7 +66,7 @@ function getFlattenRoutes(routes) {
       );
       if (route.key && (!route.children || !visibleChildren.length)) {
         try {
-          route.component = lazyload(mod[`./pages/${route.key}/index.tsx`]);
+          route.component = lazyLoad(mod[`./pages/${route.key}/index.tsx`]);
           res.push(route);
         } catch (e) {
           console.log(route.key);
@@ -280,7 +280,7 @@ function PageLayout() {
                   </Route>
                   <Route
                     path="*"
-                    component={lazyload(() => import('./pages/exception/403'))}
+                    component={lazyLoad(() => import('./pages/exception/403'))}
                   />
                 </Switch>
               </Content>
