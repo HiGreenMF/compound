@@ -37,9 +37,7 @@ function useStorage(
 
   useEffect(() => {
     const storageValue = localStorage.getItem(key);
-    if (storageValue) {
-      setStoredValue(storageValue);
-    }
+    storageValue && setStoredValue(storageValue);
   }, []);
 
   return [storedValue, setStorageValue, removeStorage];
