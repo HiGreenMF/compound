@@ -26,10 +26,18 @@
       "version": "16.8"
     }
   },
-  "plugins": ["react", "babel", "@typescript-eslint/eslint-plugin", "prettier"],
+  "plugins": [
+    "react",
+    "babel",
+    "@typescript-eslint/eslint-plugin",
+    "prettier",
+    "react-hooks"
+  ],
   "rules": {
     "react/display-name": 0,
     "react/prop-types": 0,
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   }
 }
