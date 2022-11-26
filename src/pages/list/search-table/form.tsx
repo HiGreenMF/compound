@@ -21,7 +21,6 @@ const { useForm } = Form;
 function SearchForm(props: {
   onSearch: (values: Record<string, any>) => void;
 }) {
-  const {} = DatePicker
   const { lang } = useContext(GlobalContext);
 
   const t = useLocale(locale);
